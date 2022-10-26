@@ -2,7 +2,7 @@
   "name": "@fcodelabs/react-helper-hooks",
   "version": "0.0.0",
   "description": "A Custom Set of Helper Hooks written in Typescript to Make Your Life Easier.",
-  "author": "Dulaj Ariyaratne <dulajdeshans@gmail.com>",
+  "author": "Dulaj Ariyaratne <dulaj@fcodelabs.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fcodelabs/react-helper-hooks.git"
