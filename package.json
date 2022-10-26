@@ -1,0 +1,74 @@
+{
+  "name": "@fcodelabs/react-helper-hooks",
+  "version": "0.0.0",
+  "description": "A Custom Set of Helper Hooks written in Typescript to Make Your Life Easier.",
+  "author": "Dulaj Ariyaratne <dulajdeshans@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcodelabs/react-helper-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fcodelabs/react-helper-hooks/issues"
+  },
+  "homepage": "https://fcodelabs.github.io/react-helper-hooks",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "lint-fix": "tsdx lint --fix",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/react-helper-hooks.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-helper-hooks.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-helper-hooks.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.1.0",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "husky": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "size-limit": "^8.1.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  },
+  "resolutions": {
+    "**/@typescript-eslint/eslint-plugin": "^4.1.1",
+    "**/@typescript-eslint/parser": "^4.1.1"
+  }
+}

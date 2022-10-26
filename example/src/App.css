@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.home-content {
+  width: 700px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
+}
+
+.App-header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  background-color: #282c34;
+}
+
+p, h2 {
+  margin-bottom: 2px;
+}
+
+.helper-text {
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 10px 10px;
+  color: #282c34;
+  background: #e2e2e2;
+  border-radius: 10px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+.how-to-block {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.how-to-block code {
+  margin: 10px 0;
+}
+
+.how-to-title {
+  margin-bottom: 10px;
+}
+
+.how-to-sub-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #282c34;
+}
+
+.detail-block p {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.detail-block span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.detail-block ul li {
+  margin-bottom: 10px;
+}
+
+.copy-block {
+  max-width: 100%;
+  width: 100%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
