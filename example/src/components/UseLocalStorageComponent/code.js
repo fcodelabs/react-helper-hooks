@@ -1,13 +1,26 @@
-const code = `import {useWindowSize} from '@fcodelabs/react-helper-hooks'
+const code = `import { useLocalStorage } from '@fcodelabs/react-helper-hooks'
 
 function Example() {
-    const  [windowSize,isDesktop] = useWindowSize(1024);
-        return (
+    const [count, setCount] = useLocalStorage('count', 0);
+
+    const incrementCount = (): void => {
+        setCount(count + 1)
+    }
+
+    const decrementCount = (): void => {
+        setCount(count - 1);
+    }
+
+    return (
+        <div>
+            <h2 className="p-10">useLocalStorage</h2>
+            <p>Count: {count}</p>
             <div>
-                <p>Window Size: {windowSize.width}</p>
-                 <p>Current Device Size: {isDesktop ? 'Desktop': 'Mobile'}</p>
+                <button onClick={incrementCount}>Increment (+)</button>
+                <button onClick={decrementCount}>Decrement (-)</button>
             </div>
-        )
+        </div>
+    )
 }
 `
 export default code;

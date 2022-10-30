@@ -1,7 +1,7 @@
 const code = `import { useWindowSize } from '@fcodelabs/react-helper-hooks'
 
 function Example() {
-    const  [ windowSize, isDesktop ] = useWindowSize(1024);
+    const  { windowSize, isDesktop } = useWindowSize(1024);
         return (
             <div>
                 <p>Window Size: {windowSize.width}</p>

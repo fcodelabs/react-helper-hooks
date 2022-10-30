@@ -4,15 +4,15 @@ import {CopyBlock, atomOneDark} from "react-code-blocks";
 import code from './code.js'
 
 export default function UseLocalStorageComponent(): JSX.Element {
-    const [count] = useLocalStorage('count', 0);
+    const [count, setCount] = useLocalStorage('count', 0);
 
-    // const incrementCount = (): void => {
-    //     setCount(count + 1)
-    // }
+    const incrementCount = (): void => {
+        setCount(count + 1)
+    }
 
-    // const decrementCount = (): void => {
-    //     setCount(count - 1);
-    // }
+    const decrementCount = (): void => {
+        setCount(count - 1);
+    }
 
     return (
         <div className="content">
@@ -20,10 +20,12 @@ export default function UseLocalStorageComponent(): JSX.Element {
 
             <p>Count: {count}</p>
 
-            {/* <button onClick={incrementCount}>Increment (+)</button>
-            <button onClick={decrementCount}>Decrement (-)</button> */}
+            <div style={{display: 'flex', padding: 10}}>
+                <button className="btn btn-default" style={{marginRight: 10}} onClick={incrementCount}>Increment (+)</button>
+                <button  className="btn btn-default" onClick={decrementCount}>Decrement (-)</button>
+            </div>
 
-            <span className="helper-text">Resize your window to See how this works</span>
+            <span className="helper-text">See your browser's localStorage to see the state values</span>
             <br />
             <div className="how-to-block">
                 <h2 className="how-to-title">How to Use</h2>
@@ -31,7 +33,12 @@ export default function UseLocalStorageComponent(): JSX.Element {
                 <div className="detail-block">
                     <h3 className="how-to-sub-title">Parameters</h3>
                     <ul>
-                        <li>key</li>
+                        <li>key: string</li>
+                    </ul>
+                    <span>Key of the Local storage value</span>
+                    <br/>
+                    <ul>
+                        <li>initialState: any</li>
                     </ul>
                     <span>Key of the Local storage value</span>
                 </div>
@@ -39,10 +46,16 @@ export default function UseLocalStorageComponent(): JSX.Element {
                 <div className="detail-block">
                     <h3 className="how-to-sub-title">Returns</h3>
                     <ul>
-                        <li>windowSize <code>{`{width: number, height: number}`}</code></li>
+                        <li>getter - get the current value</li>
                     </ul>
 
-                    <span>Size (width and height) of the Window as an Object</span>
+                    <span>Current state value stored in the localStorage</span>
+                    <br/>
+                    <ul>
+                        <li>setter - set/update the current value</li>
+                    </ul>
+
+                    <span>Method used for setting the value. Accepts one parameter which is the updated value.</span>
                 </div>
 
                 <div className="copy-block">
